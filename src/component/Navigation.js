@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './styles.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import {FaWhatsapp}from 'react-icons/fa'
 import Navbar from 'react-bootstrap/Navbar';
 
 const Navigation = () => {
@@ -17,8 +18,20 @@ const Navigation = () => {
             style={{ maxHeight: '100px' }}
           >
             <NavLink to="/" className="mr-3">Home</NavLink>
-            <NavLink to="/Services" className="mr-3">Services</NavLink>
-            <NavLink to="/help" className="mr-3">FQ</NavLink>
+            <NavLink to="/Services" className="mr-3">Contact</NavLink>
+            <NavLink to="/help" className="mr-3">About</NavLink>
+             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
+                  <FaWhatsapp class="text-site-gray-1 text-2xl" />
+                  
+                </div>
+                 <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
+                  <FaWhatsapp class="text-site-gray-1 text-2xl" />
+                  
+                </div>
+                 <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
+                  <FaWhatsapp class="text-site-gray-1 text-2xl" />
+                  
+                </div>
             <NavLink to="/authenticate">
               <button class="inline-flex text-white text-center justify-center border px-2 py-1 focus:outline-none  hover:bg-blue-600 rounded-lg text-sm mr-3 bg-slate-400">Log in</button>
             </NavLink>
