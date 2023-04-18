@@ -1,6 +1,7 @@
 import React from "react";
 // import Mycarousel from './Carousel'
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 import { FaSearch, FaWhatsapp } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa";
 import Ourteam from "../component/Ourteam";
@@ -26,7 +27,7 @@ export default function home() {
               <span class="dark:text-site-green-5 text-4xl font-bold xl:text-4xl 2xl:text-8xl"> We track for you </span>
             </h1>
   
-            <h1 class="dark:text-site-green-5 mt-6 border-l-8 py-2 pl-2 text-lg leading-6 text-gray-800 lg:pl-12 lg:text-2xl lg:leading-8">To be here with you Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit laudantium, ad ab quibusdam ullam nam excepturi nobis cupiditate quae nihil dolores moll</h1>
+            <h1 class="dark:text-site-green-5 mt-6 border-l-8 py-2 pl-2 text-lg leading-6 text-gray-800 lg:pl-12 lg:text-2xl lg:leading-8">The ultimate solution for keeping track of your devices. Whether you're an individual or a business owner, our powerful and easy-to-use platform makes it simple to manage and protect your devices.</h1>
             <div class="mt-12 items-center justify-center sm:flex">
               <Link to="/register">
                 <action-button type="primary" size="sm" text="btn.signUp" class="mr-5" />
@@ -36,7 +37,7 @@ export default function home() {
               </Link>
             </div>
             <div class="mt-12 flex items-center justify-center pl-16 sm:pl-0 md:flex md:pl-0 lg:pl-12 xl:pl-16 2xl:mt-24 2xl:pl-16">
-              <Link  class="cursor-pointer">
+              {/* <Link  class="cursor-pointer">
                 <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
                   <FaWhatsapp class="text-site-gray-1 text-2xl" />
                   
@@ -51,7 +52,10 @@ export default function home() {
                 <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
                   <FaWhatsapp class="text-site-gray-1 text-2xl" />
                 </div>
-              </Link>
+              </Link> */}
+              <NavLink to="/authenticate">
+              <button class="inline-flex text-white text-center justify-center border px-2 py-1 focus:outline-none  hover:bg-blue-600 rounded-lg text-sm mr-3 bg-slate-400">Sign In</button>
+            </NavLink>
             </div>
           </div>
           <div class="block">
