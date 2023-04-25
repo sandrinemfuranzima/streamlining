@@ -8,7 +8,9 @@ import { Routes, Route } from 'react-router-dom'
 import Services from './component/Services'
 import ContactMe from './component/ContactMe'
 import Registration from './component/Registration'
-
+import Index from './admin/Index'
+import Settingview from './admin/Settingview'
+import Deviceview from './admin/Deviceview'
 function App() {
   return (
     <div >
@@ -22,6 +24,9 @@ function App() {
         <Route path='/' element={<Authenticate/>} />
         <Route path='/about' element={<About/>}/>
         <Route path='/registration' element={<Registration/>} />
+        <Route path='/index' element= { <Index/>}></Route>
+        <Route path="/setng" element={<Settingview/>}></Route>
+        <Route path="/device" element={<Deviceview/>}></Route>
      </Routes>
      </div>
     </div>

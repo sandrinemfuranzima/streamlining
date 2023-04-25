@@ -1,181 +1,176 @@
 import React from 'react'
-import steal from '../assets/image/steal.png'
-const myRegistration = () => {
+import { Link } from 'react-router-dom'
+function Registration() {
   return (
-    <div>
-<section class="bg-white">
-  <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-    <section
-      class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
-    >
-      <img
-        alt="Night"
-        src={steal}
-        class="absolute inset-0 h-full w-full object-cover opacity-80"
+    <div className=''>
+     
+
+
+
+<section class="py-24   ">
+    <div class="container mx-auto px-4 h-full">
+      <div class="flex content-center items-center justify-center h-full">
+        <div class="w-full lg:w-6/12 px-4">
+          <div
+            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-site-white-4 border-0 dark:bg-site-gray-1"
+          >
+            <div class="rounded-t mb-0 px-6 py-6">
+              <div class="mb-3">
+                <h6
+                  class="text-site-gray-1 text-sm font-bold dark:text-site-white-4"
+                >
+                  Sign up with
+                </h6>
+              </div>
+              <div class="btn-wrapper">
+                <h2
+                  class="font-bold text-lg mb-5 text-site-gray-1 dark:text-site-white-4"
+                >
+                  Let's Set your account up
+                </h2>
+                
+              </div>
+              <hr class="mt-4 border-b-1 text-site-gray-1" />
+            </div>
+            <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+              <form id="form"  action="text.com">
+               
+                <div v-if="step == 1" class="relative w-full mb-3">
+                  
+
+                <label class="block uppercase text-site-gray-1 text-xs font-bold mb-2 dark:text-site-white-5">
+      Natioanl id
+      </label>
+      <input placeholder='119...'
+        class="border-0 px-3 py-3 placeholder-site-white-1 text-site-gray-1 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+       
       />
 
-      <div class="hidden lg:relative lg:block lg:p-12">
-        <a class="block text-white" href="/">
-          <span class="sr-only">Home</span>
-          
-           
-        </a>
 
-        <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-   
-        </h2>
+                  <span
+                    class="text-xs text-site-yellow-1"
+                    v-if="this.errors.nationalId"
+                  >
+                    <span>error national id </span>
+                  </span>
+                </div>
 
-        <p class="mt-4 leading-relaxed text-white/90">
-         
-        </p>
-      </div>
-    </section>
-
-    <main
-      aria-label="Main"
-      class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
-    >
-      <div class="max-w-xl lg:max-w-3xl">
-        <div class="relative -mt-16 block lg:hidden">
-          <a
-            class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
-            href="/"
-          >
-           
-          </a>
-
-          <h1
-            class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
-          >
+                <div v-if="step == 1" class="relative w-full mb-3">
+                  
+                <label class="block uppercase text-site-gray-1 text-xs font-bold mb-2 dark:text-site-white-5">
+      Phone Number
+      </label>
+      <input placeholder='07...'
+        class="border-0 px-3 py-3 placeholder-site-white-1 text-site-gray-1 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
        
-          </h1>
+      />
+                  <span
+                    class="text-xs text-site-yellow-1"
+                    v-if="this.errors.phoneNumber"
+                  >
+                    <span>error phone </span>
+                  </span>
+                </div>
+
+{/*                verification section
+                <div v-if="step == 2" class="relative w-full mb-3">
+                  <input-text
+                    id="verificationCode"
+                    placeholder="Your Verification Code"
+                    size="lg"
+                    label="'Enter Code Send to: ' + phoneNumber"
+                    v-bind:data="verificationCode"
+                    v-on:update="verificationCode = $event"
+                  />
+                  <span
+                    class="text-xs text-site-yellow-1"
+                    v-if="this.errors.verificationCode"
+                  >
+                    <span>verifivation code</span>
+                  </span>
+                </div> */}
+
+                {/*  password section
+                <div v-if="step == 3" class="relative w-full mb-3">
+                  <input-text
+                    id="password"
+                    placeholder="Create Your password"
+                    size="lg"
+                    type="password"
+                    label="Create Your password "
+                    v-bind:data="password"
+                    v-on:update="password = $event"
+                  />
+                  <span
+                    class="text-xs text-site-yellow-1"
+                    v-if="this.errors.password"
+                  >
+                    <span>{{ this.errors.password }}</span>
+                  </span>
+                </div> */}
+
+                
+                <div v-if="step == 4">
+                  <div class="w-2/3 mx-auto">
+                    <h3
+                      class="font-bold text-lg mb-3 leading-5 text-site-gray-1 dark:text-site-yellow-3"
+                    >
+                      Account Successfully Created!
+                      <Link
+                        to="/authenticate"
+                        class="text-site-green-3"
+                      >
+                        sign in
+                      </Link>
+                    </h3>
+                    {/* <img
+                      class="w-2/3 mx-20"
+                      :src="accountCreationSuccessPicture"
+                    /> */}
+                  </div>
+                </div>
+
+                <div v-if="step == 1">
+                  <label class="inline-flex items-center cursor-pointer">
+                    <input
+                      id="customCheckLogin"
+                      type="checkbox"
+                      checked
+                      class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
+                      disabled
+                    />
+                    <span class="ml-2 text-sm font-semibold text-blueGray-600">
+                      I agree with the
+                      pricary
+                    </span>
+                  </label>
+                </div>
+
+                <div v-if="step !== 4" class="text-center mt-6">
+                  <button
+                    class="bg-site-gray-2 text-site-white-5 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg hover:bg-site-gray-1 outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                  >
+                    Create Account
+                  </button> 
+                  
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-
-        <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="FirstName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              First Name
-            </label>
-
-            <input
-              type="text"
-              id="FirstName"
-              name="first_name"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="LastName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
-
-            <input
-              type="text"
-              id="LastName"
-              name="last_name"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6">
-            <label for="Email" class="block text-sm font-medium text-gray-700">
-              Email
-            </label>
-
-            <input
-              type="email"
-              id="Email"
-              name="email"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="Password"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Password
-            </label>
-
-            <input
-              type="password"
-              id="Password"
-              name="password"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="PasswordConfirmation"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Password Confirmation
-            </label>
-
-            <input
-              type="password"
-              id="PasswordConfirmation"
-              name="password_confirmation"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6">
-            <label for="MarketingAccept" class="flex gap-4">
-              <input
-                type="checkbox"
-                id="MarketingAccept"
-                name="marketing_accept"
-                class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-              />
-
-              <span class="text-sm text-gray-700">
-                I want to receive emails about events, product updates and
-                company announcements.
-              </span>
-            </label>
-          </div>
-
-          <div class="col-span-6">
-            <p class="text-sm text-gray-500">
-              By creating an account, you agree to our
-              <a href="#" class="text-gray-700 underline">
-                terms and conditions
-              </a>
-              <br/>
-              and
-               <br/>
-              <a href="#" class="text-gray-700 underline">privacy policy</a>.
-            </p>
-          </div>
-
-          <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-            <button
-              class="inline-block shrink-0 rounded-md border border-blue-300 bg-blue-300 px-12 py-3 text-sm font-medium text-black transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-            >
-              Create an account
-            </button>
-
-            <p class="mt-4 text-sm text-gray-500 sm:mt-0">
-              Already have an account?
-              <a href="#" class="text-gray-700 underline" to="/authentication">Log in</a>.
-            </p>
-          </div>
-        </form>
       </div>
-    </main>
-  </div>
-</section></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+    </div>
   )
 }
 
-export default myRegistration
+export default Registration

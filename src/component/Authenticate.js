@@ -1,33 +1,106 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-const myAuthenticate= () => {
+
+function Authenticate() {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState('');
+
+  function handlePasswordChange(event) {
+    setPassword(event.target.value);
+  }
   return (
     <div>
-        <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
       
-      <h1 class="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
-      <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
+      <section class="py-24 lithopedion">
+    <div class="container mx-auto px-4 h-full">
+      <div class="flex content-center items-center justify-center h-full">
+        <div class="w-full lg:w-6/12 px-4">
+          <div
+            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-site-white-4 border-0 dark:bg-site-white-2"
+          >
+            <div class="rounded-t mb-0 px-6 py-6">
+              <div class="mb-3">
+                <h6 class="text-site-gray-1 text-sm font-bold">
+                  <fa icon="fingerprint" class="text-3xl"></fa>
+                </h6>
+              </div>
+              <div class="btn-wrapper">
+                <h2 class="font-bold text-lg mb-5 text-site-gray-1">
+                  Login to your account
+                </h2>
+              </div>
+              <hr class="mt-4 border-b-1 text-site-gray-1" />
+            </div>
+            <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+              <form id="form">
+                <span
+                  class="text-xs text-site-yellow-1"
+                  v-if="this.errors.length"
+                >
+                  {/* <span v-for="error in errors" key="error">{{ error }}</span> */}
+                </span>
+                <div className="relative w-full mb-3">
+                  <label htmlFor="phoneNumber" className="block uppercase text-gray-700 text-xs font-bold mb-2">
+                   Your Phone
+                  </label>
+                  <input
+                   type="text"
+                   id="phoneNumber"
+                   placeholder="07.."
+                   value={phoneNumber}
+                   onChange={(event) => setPhoneNumber(event.target.value)}
+                   className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                  />
+                </div>
+
+                <div className="relative w-full mb-3">
+      <label htmlFor="password" className="block uppercase text-gray-700 text-xs font-bold mb-2">
+        Your password
+      </label>
+      <input
+        type="password"
+        id="password"
+        placeholder="What is your password?"
+        value={password}
+        onChange={handlePasswordChange}
+        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+      />
     </div>
-    <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-      <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Sign Up</h2>
-      <div class="relative mb-4">
-        <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name</label>
-        <input type="text" id="full-name" name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+
+                <div>
+                  <label class="inline-flex items-center cursor-pointer">
+                    <span class="ml-2 text-sm font-semibold text-blueGray-600">
+                      Don't have an account?
+                      <NavLink
+                        to="/registration"
+                        class="text-site-green-3"
+                      >
+                        SignUp
+                      </NavLink>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="text-center mt-6">
+                  <button
+                    class="bg-site-gray-2 text-site-white-5 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg hover:bg-site-gray-1 outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                  >
+                    Login
+                  </button>
+                  <NavLink to="/index">admin</NavLink>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="relative mb-4">
-        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-        <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
-      </div>
-      <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-      <p class="text-xs text-gray-500 mt-3">Don't have an account?<Link to='/registration'>Create account</Link>.</p>
     </div>
-  </div>
-</section>
+  </section>
+
+
     </div>
   )
 }
 
-export default myAuthenticate
+export default Authenticate

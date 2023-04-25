@@ -8,22 +8,22 @@ import Navbar from "react-bootstrap/Navbar";
 
 const Navigation = () => {
   return (
-    <Navbar className='bg-purple-50 p-2' expand="lg">
-      <Container fluid className='p-4 mx-5'>
-        <Navbar.Brand href="#">Streamlining</Navbar.Brand>
+    <Navbar className='p-2' style={{backgroundColor:'#E5E7EB'}} expand="lg">
+      <Container fluid className=' mb-[13px]'>
+        <Navbar.Brand href="#"><p className='mt-[25px] font-mono font-semibold'>Streamlining</p></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="ml-auto  my-2 my-lg-0 font-bold text-lg"
             style={{ maxHeight: '100px' }}
           >
-            <div>
+            <div className='mt-[25px] font-mono'>
               <NavLink to="/" className="mx-6">Home</NavLink>
             <NavLink to="/contact" className="mx-3">Contact</NavLink>
             <NavLink to="/about" className="mx-3">About</NavLink>
             </div>
-
-             <div className='flex ml-3 mr-3'>
+             
+             <div className='flex ml-3 mr-3 mt-[19px]'>
 
                   <div class="flex h-10 mx-2 w-10 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
                   <FaFacebook class="text-site-gray-1  text-2xl" />
@@ -41,8 +41,9 @@ const Navigation = () => {
              </div>
 
             <NavLink to="/authenticate">
-              <button class="inline-flex text-white text-center justify-center border px-2 py-1 focus:outline-none  hover:bg-blue-600 rounded-lg text-sm mr-3 bg-slate-400">Sign In</button>
+              <button class="inline-flex text-white text-center justify-center border px-2 py-1 focus:outline-none  hover:bg-blue-600 rounded-lg text-sm mr-3 bg-slate-400 mt-[25px]">Sign In</button>
             </NavLink>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
