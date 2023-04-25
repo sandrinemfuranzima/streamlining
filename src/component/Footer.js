@@ -1,96 +1,158 @@
 import React from 'react'
 import './styles.css'
+import { NavLink } from 'react-router-dom';
+import { FaTwitter,FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa'
 const myFooter = () => {
   return (
     <div className='footer mx-6 '>
-        <footer class="text-gray-800 body-font">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       
-        <span class="ml-3 text-xl">E-Holding</span>
-      </a>
-      <p class="mt-2 text-sm text-gray-800"></p>
+      <footer class="relative bg-site-white-5 dark:bg-site-gray-1 pt-8 pb-6">
+    <div
+      class="bottom-auto top-0 left-0 right-0 w-full {icabsolute pointer-events-none overflow-hidden -mt-20 h-20"
+      style={{transform: "translateZ(0)"}}
+    >
+      <svg
+        class="absolute bottom-0 overflow-hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        version="1.1"
+        viewBox="0 0 2560 100"
+        x="0"
+        y="0"
+      >
+        <polygon
+          class="text-site-gray-1 fill-current dark:text-site-yellow-3"
+          points="2560 0 2560 100 0 100"
+        ></polygon>
+      </svg>
     </div>
-    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-   
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">OverView</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">Device info</a>
-          </li>
-        
-        </nav>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap text-center lg:text-left">
+        <div
+          class="w-full lg:w-6/12 px-4 text-site-gray-1 dark:text-site-yellow-4"
+        >
+          <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+          <h5 class="text-lg mt-0 mb-2">
+            Find us on any of these platforms, we respond within 24 hours.
+          </h5>
+          <div class="mt-6 lg:mb-0 mb-6">
+            <button
+              class="bg-site-green-5 text-site-gray-1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <FaFacebook/>
+            </button>
+            <button
+              class="bg-site-gray-5 text-site-gray-1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <FaWhatsapp/>
+            </button>
+            <button
+              class="bg-site-gray-5 text-site-gray-1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mx-2"
+              type="button"
+            >
+             <FaInstagram/>
+            </button>
+            <button
+              class="bg-site-gray-5 text-site-gray-1 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <FaTwitter/>
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span
+                class="block uppercase text-site-gray-3 dark:text-site-yellow-2 text-sm font-semibold mb-2"
+              >
+                Useful Links
+              </span>
+              <ul class="list-unstyled">
+                <li>
+                  <p
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                  >
+                    About Us
+                  </p>
+                </li>
+                <li>
+                  <p
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                  >
+                    FAQ
+                  </p>
+                </li>
+                <li>
+                  <a
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                    href=""
+                  >
+                    Location
+                  </a>
+                </li>
+                <li>
+                  <router-link
+                    to=""
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                  >
+                    Check Device
+                  </router-link>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span
+                class="block uppercase text-site-gray-3 dark:text-site-yellow-2 text-sm font-semibold mb-2"
+              >
+                Other Resources
+              </span>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                    href=""
+                  >
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                    href=""
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <p
+                    class="text-site-gray-1 hover:text-site-gray-2 font-semibold block pb-2 text-sm dark:text-site-yellow-4 dark:hover:text-site-yellow-3"
+                  >
+                    Contact Us
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Social Medias</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">Twitter</a>
-          </li>
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">Instagram</a>
-          </li>
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">Facebook</a>
-          </li>
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">Telegram</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Others</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">Help</a>
-          </li>
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">FQA</a>
-          </li>
-          <li>
-            <a class="text-gray-800 hover:text-gray-800 mx-8">Customer*</a>
-          </li>
-          <li>
-            <a class="text-gray-800 hover:text-gray-800">CareServices</a>
-          </li>
-        </nav>
+      <hr class="my-6 border-blueGray-300" />
+      <div
+        class="flex flex-wrap items-center md:justify-between justify-center"
+      >
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div
+            class="text-sm text-site-gray-1 dark:text-site-yellow-4 font-semibold py-1"
+          >
+            Copyright © date  E-Holdings.
+         
+          </div>
+        </div>
       </div>
     </div>
-  </div>
- 
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-black text-sm text-center sm:text-left">© 2023 E-HOLDING —
-        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-black ml-1" target="_blank"></a>
-      </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a class="text-gray-800">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-800">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-800">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-800">
-          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-          </svg>
-        </a>
-      </span>
-  
-  </div>
-</footer>
+  </footer>
 </div>
   )
 }
