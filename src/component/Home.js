@@ -1,60 +1,45 @@
 import React from "react";
 // import Mycarousel from './Carousel'
 import { Link } from "react-router-dom";
-import { NavLink } from 'react-router-dom'
+ 
+import { NavLink } from 'react-router-dom';
 import { FaSearch, FaWhatsapp } from "react-icons/fa";
-import { FaQuestion } from "react-icons/fa";
-import Ourteam from "../component/Ourteam";
-import Services from "../component/Services";
-import Footer from "./Footer";
-import image1 from "../assets/image/image1.svg"
+import Footer from "../component/Footer";
+import image1 from "../assets/image/image1.svg";
+import image3 from "../assets/image/image3.svg";import image4 from "../assets/image/image4.svg";
+
+
+
 export default function home() {
   return (
     <div>
-      
-
 
 <div class="dark:bg-site-gray-1 relative bg-[length:200px_200px] bg-fixed bg-right-top bg-no-repeat pb-24 md:bg-[length:400px_700px] lg:pb-12" 
 // style="{ backgroundImage: 'url(' + rectanglebg + ')' }"
 >
     <div class="">
-      <div class="container relative z-20 mx-auto px-4 lg:px-0">
+      <div class="container relative  z-20  px-4 lg:px-0">
         <div class="my-10 flex flex-col-reverse items-center justify-between lg:flex-row">
           <div class="pt-8 lg:w-1/2 lg:pt-0">
-            <h1 class="text-site-gray-1 border-site-yellow-3 dark:text-site-green-5 mt-8 border-l-8 pl-2 text-3xl leading-8 lg:pl-12 lg:text-6xl xl:mt-0">
-              Streamlining
+            <h1 class="text-site-gray-1 border-site-yellow-3 dark:text-site-green-5 mt-24 border-l-8 pl-2 text-3xl leading-8 lg:pl-12 lg:text-6xl xl:mt-0">
+              <b>Streamlining</b>
               <br />
               <span class="dark:text-site-green-5 text-4xl font-bold xl:text-4xl 2xl:text-8xl"> We track for you </span>
             </h1>
   
             <h1 class="dark:text-site-green-5 mt-6 border-l-8 py-2 pl-2 text-lg leading-6 text-gray-800 lg:pl-12 lg:text-2xl lg:leading-8">The ultimate solution for keeping track of your devices. Whether you're an individual or a business owner, our powerful and easy-to-use platform makes it simple to manage and protect your devices.</h1>
             <div class="mt-12 items-center justify-center sm:flex">
-              <Link to="/register">
-                <action-button type="primary" size="sm" text="btn.signUp" class="mr-5" />
-              </Link>
+             
+
               <Link >
                 <action-button type="tertiary" size="sm" text="btn.learnMore" class="mr-5" />
               </Link>
             </div>
             <div class="mt-12 flex items-center justify-center pl-16 sm:pl-0 md:flex md:pl-0 lg:pl-12 xl:pl-16 2xl:mt-24 2xl:pl-16">
-              {/* <Link  class="cursor-pointer">
-                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
-                  <FaWhatsapp class="text-site-gray-1 text-2xl" />
-                  
-                </div>
-              </Link>
-              <Link  class="cursor-pointer">
-                <div class="mx-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
-                  <FaWhatsapp class="text-site-gray-1 text-2xl" />
-                </div>
-              </Link>
-              <Link class="cursor-pointer">
-                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl">
-                  <FaWhatsapp class="text-site-gray-1 text-2xl" />
-                </div>
-              </Link> */}
-              <NavLink to="/authenticate">
-              <button class="inline-flex text-white text-center justify-center border px-2 py-1 focus:outline-none  hover:bg-blue-600 rounded-lg text-sm mr-3 bg-slate-400">Sign In</button>
+              {/* <ActionButton/> */}
+              <NavLink to="/about
+              ">
+              <button class="inline-flex text-black text-center  border px-5 py-1 focus:outline-none mx-1 my-30 hover:bg-violet-300 rounded-lg text-sm mr-3 bg-yellow-300" >Learn More </button>
             </NavLink>
             </div>
           </div>
@@ -68,26 +53,20 @@ export default function home() {
  
   
   
-  
-  
-  
-  
-  
-  
     <section class="body-font lithopedion dark bg-site-white-5 dark:bg-site-gray-1 dark:text-site-white-4"    >
       <div
         class="container mx-auto flex flex-col px-5 py-24 justify-center items-center"
       >
-        <img  src={image1} alt="LandingScreen" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" />
+        <img  src={image3} alt="LandingScreen" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" />
        
         <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
           <h1
             class="title-font sm:text-4xl text-2xl mb-4 font-bold text-site-gray-2 dark:dark:text-site-yellow-4"
           >
-           This is the title
+          Not sure about the device you are about to buy? How about we help you check it.
           </h1>
           <p class="mb-8 leading-relaxed drop-shadow-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cum quia perferendis debitis delectus eius et amet nam! In, maxime!
+            With our powerful search capabilities, you can quickly and easily loop up any device by searching with it's unique ID such as serial number, IMEI or any other identifying information to make sure that it's clean!
           </p>
           <div class="flex w-full justify-center items-end">
             <div
@@ -99,7 +78,7 @@ export default function home() {
                   <div
                     class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
                   >
-                    <FaWhatsapp/>
+                    <FaSearch/>
                   </div>
                   <input
                     type="text"
@@ -113,7 +92,7 @@ export default function home() {
                   type="submit"
                   class="p-2.5 ml-2 text-sm font-medium text-site-white-5 bg-site-gray-1 rounded-lg border border-site-gray-2 hover:bg-site-gray-2 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-site-yellow-2"
                 >
-                  <FaWhatsapp/>
+                  <FaSearch/>
                   <span class="sr-only">search something</span>
                 </button>
               </form>
@@ -136,7 +115,6 @@ export default function home() {
     </section>
   
   
-  
   {
   /*
   
@@ -153,20 +131,21 @@ export default function home() {
         <div class="items-center flex flex-wrap">
           <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
             
-            <img  src={image1} alt="LandingScreen"  class="max-w-full rounded-lg shadow-lg" />
+            <img  src={image4} alt="LandingScreen"  class="max-w-full rounded-lg shadow-lg" />
           </div>
           <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div class="md:pr-12">
               <div
                 class="text-site-yellow-5 p-3 text-2xl text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-site-yellow-2"
               >
-                <FaWhatsapp/>
+               <a href="https://www.flaticon.com/free-icons/gears" title="gears icons"></a>
+
               </div>
               <h3 class="text-3xl font-semibold">
-                This is a title
+               Are you a business owner?
               </h3>
               <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, laudantium!
+               Streamlining offers you powerful tools for managing and protecting your inventory. You can easily track the devices you've sold, monitor remaining warranty, and generate detailed reports to optimize your operations.
               </p>
               <ul class="list-none mt-6">
                 <li class="py-2">
@@ -180,7 +159,7 @@ export default function home() {
                     </div>
                     <div>
                       <h4 class="text-blueGray-500">
-                        This is 
+                       Generate Contract
                       </h4>
                     </div>
                   </div>
@@ -196,7 +175,7 @@ export default function home() {
                     </div>
                     <div>
                       <h4 class="text-blueGray-500">
-                        The second
+                        Keep Track of devices under warranty
                       </h4>
                     </div>
                   </div>
@@ -212,7 +191,7 @@ export default function home() {
                     </div>
                     <div>
                       <h4 class="text-blueGray-500">
-                        and the third
+                      Transfer the ownsership
                       </h4>
                     </div>
                   </div>
@@ -248,7 +227,7 @@ export default function home() {
         >
           <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font">
             title
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, in!</p>
+            <p>E-holdings makes it easy to track your devices no matter the circumstances. With our powerful organization tools, you'll always find it a joke to keep track of your device, we are here to giving you peace of mind.</p>
           </h1>
   
           <Link to="">
@@ -414,7 +393,7 @@ export default function home() {
   }
   
   
-    22
+    
     <section
                            class="main-section bg-no-repeat bg-fixed bg-cover dark:bg-site-gray-1"
                         // style={{ backgroundImage: "" }}
@@ -425,12 +404,12 @@ export default function home() {
             <p
               class="my-5 uppercase text-lg text-center text-gray-600 leading-normal dark:text-site-yellow-4"
             >
-             Short Title
+           WHAT DO WE DO FOR YOU ?
             </p>
             <h2
               class="text-4xl lg:text-5xl pt-4 font-extrabold text-center leading-tight text-site-gray-1 lg:w-7/12 md:w-9/12 dark:text-site-yellow-4 dark:drop-shadow-2xl"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, in ex. Natus voluptas minus eum saepe fugit ex facilis animi?
+              All your electronics managed in one place for indubitable ownership
             </h2>
           </div>
         </div>
@@ -448,12 +427,12 @@ export default function home() {
                 <h4
                   class="text-lg font-bold leading-tight text-site-gray-1 dark:text-site-yellow-3"
                 >
-                 Title
+                Track you items
                 </h4>
                 <p
                   class="text-base text-site-gray-2 leading-normal xl:w-10/12 pt-2 dark:text-site-yellow-5"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fuga laboriosam voluptatum repellendus qui perspiciatis assumenda, aperiam rem voluptates aliquid!
+                 E-holdings makes it easy to track your devices no matter the circumstances. With our powerful organization tools, you'll always find it a joke to keep track of your device, we are here to giving you peace of mind.
                 </p>
               </div>
             </div>
@@ -484,12 +463,12 @@ export default function home() {
                 <h4
                   class="text-lg font-bold leading-tight text-site-gray-1 dark:text-site-yellow-3"
                 >
-                  title
+                Transfer the ownership
                 </h4>
                 <p
                   class="text-base text-site-gray-2 leading-normal xl:w-10/12 pt-2 dark:text-site-yellow-5"
                 >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id laborum temporibus doloremque deserunt ut! Ipsa reiciendis aliquam ad aspernatur perferendis.
+                E-holdings simplifies the process of transferring device ownership. Whether you're transferring a device to a new owner or acquiring it from an organization, our platform makes it easy.
                 </p>
               </div>
             </div>
@@ -503,12 +482,12 @@ export default function home() {
                 <h4
                   class="text-lg font-bold leading-tight text-site-gray-1 dark:text-site-yellow-3"
                 >
-                  title
+               Report stolen devices
                 </h4>
                 <p
                   class="text-base text-site-gray-2 leading-normal xl:w-10/12 pt-2 dark:text-site-yellow-5"
                 >
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit voluptate natus facere quas asperiores, soluta incidunt quis sit? Odit.
+                 With E-holdings, you can quickly and easily report lost or stolen devices to the authorities. Our reporting system streamlines the process, so you can rest easy knowing your devices are protected and ready to be found anytime if lost.
                 </p>
               </div>
             </div>
@@ -516,17 +495,9 @@ export default function home() {
         </div>
       </section>
     </section>
-  
-
-
-
-
-
-
-
-
-
-    
+    <div>
+      <Footer/>
+    </div>
     </div>
   );
 }
