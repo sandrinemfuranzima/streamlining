@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Tabledeviceoverview() {
   return (
-    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded" >
     <div class="rounded-t mb-0 px-2 py-3 border-0">
       <div class="flex flex-wrap items-center">
         <div class="basis-2/3 relative w-full max-w-full flex-grow flex-1">
@@ -11,14 +12,16 @@ function Tabledeviceoverview() {
         <div
           class="basis-1/3 relative w-full max-w-full flex-grow flex-1 text-right"
         >
-          <router-link to="`/${$i18n.locale}/admin/devices/warranty`">
-            <action-button type="tertiary" text="btn.seeAll"></action-button>
-          </router-link>
+          <NavLink >
+                    <button className='seeallbtn'>
+                     seeAll
+                    </button>
+                  </NavLink>
         </div>
       </div>
     </div>
     <div class="block w-11/12 mx-auto overflow-x-auto">
-      {/* Projects table  */}
+   
       <table class="items-center w-full bg-transparent border-collapse">
         <thead class="thead-light">
           <tr>

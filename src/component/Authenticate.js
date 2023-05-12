@@ -75,6 +75,7 @@ function Authenticate() {
                       <NavLink
                         to="/registration"
                         class="text-site-green-3"
+                        className="text-green-600"
                       >
                         SignUp
                       </NavLink>

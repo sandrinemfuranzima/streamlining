@@ -1,0 +1,19 @@
+.Accept {
+    border: 2px solid #147D64;
+   color: #147D64;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.Decline {
+    border: 2px solid #FBB40F;
+    color: #FBB40F;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    
+}

@@ -1,0 +1,9 @@
+.seeallbtn {
+    border: 2px  green solid;
+    width: 5rem;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}

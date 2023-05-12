@@ -51,7 +51,7 @@ function Registration() {
                     class="text-xs text-site-yellow-1"
                     v-if="this.errors.nationalId"
                   >
-                    <span>error national id </span>
+                    {/* <span>error national id </span> */}
                   </span>
                 </div>
 
@@ -68,7 +68,7 @@ function Registration() {
                     class="text-xs text-site-yellow-1"
                     v-if="this.errors.phoneNumber"
                   >
-                    <span>error phone </span>
+                    {/* <span>error phone </span> */}
                   </span>
                 </div>
 

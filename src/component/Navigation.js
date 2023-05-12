@@ -12,7 +12,7 @@ const Navigation = () => {
       <Container fluid className=' mb-[13px]'>
         <Navbar.Brand href="#"><p className='mt-[25px] font-mono font-semibold'>Streamlining</p></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        {/* <Navbar.Collapse id="navbarScroll"> */}
           <Nav
             className="ml-auto  my-2 my-lg-0 font-bold text-lg"
             style={{ maxHeight: '100px' }}
@@ -45,7 +45,7 @@ const Navigation = () => {
             </NavLink>
             
           </Nav>
-        </Navbar.Collapse>
+        {/* </Navbar.Collapse> */}
       </Container>
     </Navbar>
     // <nav class="top-0 fixed z-50  mt:w-0 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg shadow bg-site-gray-5 dark:bg-site-gray-1">

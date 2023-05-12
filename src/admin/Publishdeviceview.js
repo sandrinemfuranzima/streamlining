@@ -1,17 +1,33 @@
 import React from 'react'
-import { NavLink } from 'react-bootstrap'
 import Sidebar from './component/Sidebar'
+import { NavLink } from 'react-router-dom'
 import Cardstats from './component/Cardstats'
-import Devicecard from './component/Devicecard'
 import { BiSearch } from "react-icons/bi";
+import Devicecard from './component/Devicecard';
 
-function Deviceview() {
+
+function Publishdeviceview() {
   return (
     <div>
-    <Sidebar/>
-    <div class="relative md:ml-64 bg-site-white-5 dark:bg-site-gray-1 mt-4">
-      <admin-navbar path="List of all Invoices " down="medium" />
-      
+        <Sidebar/>
+        <div class="relative md:ml-64 bg-site-white-5 dark:bg-site-gray-1">
+      <admin-navbar path="Publish Device to users" down="small" />
+
+   
+      <div class="flex flex-wrap mx-auto align-baseline max-w-3xl p-6">
+        <div
+          class="flex flex-col text-center w-full mb-10 text-gray-900 dark:text-site-green-3"
+        >
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">
+            Publish or unpublish a device for users to see
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            All users will be able to see the Devices you published
+          </p>
+        </div>
+      </div>
+
+     
       <div class="flex justify-around flex-wrap mb-6">
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
           <Cardstats statSubtitle="Devices"/>
@@ -44,7 +60,7 @@ function Deviceview() {
         </div>
       </div>
 
-      
+  
       <div class="w-full justify-center my-2">
         <div class="flex w-2/4 mx-auto">
           <input
@@ -63,16 +79,21 @@ function Deviceview() {
           </button>
         </div>
       </div>
+
       <div class="flex flex-col md:flex-row justify-around flex-wrap">
+        <device-card v-for="(device, index) in devices"/>
         <Devicecard/>
+          
+      
+        
       </div>
-    
+   
       <div class="px-4 md:px-10 mx-auto w-full">
         <footer-admin />
       </div>
     </div>
-  </div>
+    </div>
   )
 }
 
-export default Deviceview
+export default Publishdeviceview
